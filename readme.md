@@ -23,6 +23,14 @@ As a condensed and user-friendly version of SLAM-LLM, this component is designed
 
 A standalone CTC training module for fine-tuning the Whisper encoder with support for both standard and **phone-synchronized alignment** strategies.
 
+---
+
+## 📌 3. sense_voice_LLM
+
+Baseline of the LegoSLM paper using SenseVoice as the encoder: CTC posterior-probability-weighted embeddings are injected into the LLM embedding space.
+
+---
+
 ### Key Features:
 - Encoder + CTC training pipeline.
 - Support for vocabularies including `sentence_piece`, `gemma-2b`, `qwen-2.5`, and self-defined token sets.
