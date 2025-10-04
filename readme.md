@@ -66,6 +66,8 @@ A standalone CTC training module for fine-tuning the Whisper encoder with suppor
 
 使用sensevoice作为encoder的LegoSLM论文基线，CTC后验概率加权嵌入LLM embedding空间
 
+---
+
 ### 主要特性：
 - 支持 Encoder + CTC 的训练范式；
 - 兼容多种词表：`sentence_piece`、`gemma-2b`、`qwen-2.5`、自定义词表等；
