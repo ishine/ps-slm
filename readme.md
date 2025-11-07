@@ -42,9 +42,10 @@ PS-SLM shares (almost) the same **dependency stack** as
 - On top of that, configure the **Ascend NPU driver and runtime stack**
   (e.g., CANN, `torch-npu`, etc.) according to your hardware / cluster setup.
 - For quickly set up, we will release a tar of dockerfile which could be directly run on 910b.
+
 > ⚠️** Note: **
 > - PS-SLM now currently only supports Ascend NPUs.
 > - If GPU training is required, simply replace all .npu with .cuda in the code.
 > - NVIDIA / CUDA GPU support is coming soon for convenience.
-
+> - We are in a hurry for a more complete description.
 </details>
