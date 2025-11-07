@@ -5,7 +5,7 @@
 
 ## Overview
 
-**PS-SLM** (*Phone-Synchronized Speech Language Model*) proposes a novel alignment strategy based on **phone-synchronized decoding**, further improving prior methods such as **LegoSLM** and **SLAM-LLM**. It enhances speech-text alignment quality and strengthens the integration between the encoder and language model components.
+**PS-SLM** (*Phone-Synchronized Speech Language Model*) proposes a novel alignment strategy based on **phone-synchronized decoding**, further improving prior methods such as **LegoSLM** and **SLAM-LLM**. It enhances speech-text alignment quality and strengthens the integration between the encoder and language model components. 
 
 This repository contains two main components:
 
@@ -52,7 +52,7 @@ A standalone CTC training module for fine-tuning the Whisper encoder with suppor
 
 一个基于 SLAM-LLM-ASR 框架的指令遵循型 **语音大语言模型（Speech LLM）**。该模块集成了 **Whisper 编码器**或 **SenseVoice 编码器**，采用模块化设计，并引入了**音素同步对齐**机制，提升了转录性能和上下文理解能力。
 
-该模块作为 SLAM-LLM 的精简版，具备更强的可用性和扩展性，便于快速搭建自定义的 Speech LLM 架构。
+该模块作为 SLAM-LLM 的精简版，具备更强的可用性和扩展性，便于快速搭建自定义的 Speech LLM 架构。当前仅支持NPU驱动，GPU版本正在适配中。
 
 ---
 
@@ -71,3 +71,18 @@ A standalone CTC training module for fine-tuning the Whisper encoder with suppor
 > - 已全面适配并验证 **SLAM-LLM-NPU 环境**，可稳定运行。
 
 </details>
+
+<details>
+<summary>📖 English Version</summary>
+
+PS-SLM shares (almost) the same **dependency stack** as  
+[SLAM-LLM](https://github.com/X-LANCE/SLAM-LLM), and is further **adapted to Ascend NPUs**.
+
+- Please follow **SLAM-LLM** to install the common dependencies:
+- On top of that, configure the **Ascend NPU driver and runtime stack**
+  (e.g., CANN, `torch-npu`, etc.) according to your hardware / cluster setup.
+- For quickly set up, we will release a tar of dockerfile which could be directly run on 910b.
+> ⚠️** Note: **
+> - PS-SLM now currently only supports Ascend NPUs.
+> - If GPU training is required, simply replace all .npu with .cuda in the code.
+> - NVIDIA / CUDA GPU support is coming soon for convenience.
